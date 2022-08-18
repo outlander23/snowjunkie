@@ -64,10 +64,11 @@
 }
 
 .add-product-title-container h3 {
-  margin-bottom: 15px;
+  margin-bottom: 1.5rem;
   color: rgb(24, 24, 24);
-  font-family: proxima-nova, sans-serif;
+  font-family: "proxima-nova", sans-serif;
   font-size: 1.8rem;
+  line-height: 1.45;
   font-weight: 600;
 }
 .add-product-container-description {
@@ -267,7 +268,7 @@ hr {
   width: 2rem;
   display: inline-block;
   border-radius: 50%;
-  border: 4px solid rgb(41, 15, 212);
+  border: 4px solid rgb(43, 128, 255);
 
   background-color: rgb(219, 219, 227);
   cursor: pointer;
@@ -318,6 +319,7 @@ hr {
 }
 .data-picker {
   padding-left: 20px;
+  width: 50%;
 }
 .section-1 {
   display: flex;
@@ -332,5 +334,17 @@ div.ant-upload {
 }
 .price-box {
   display: flex;
+  width: 100%;
   flex-direction: column;
+}
+.text-sm {
+  display: block;
+  color: rgb(24, 24, 24);
+  font-size: 14px;
+  font-weight: 510;
+  line-height: 14px;
+  margin-bottom: 5px;
+  height: 1.3em;
+  width: auto;
+  margin-bottom: 6px;
 }

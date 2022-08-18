@@ -58,6 +58,22 @@ Medium: 11px
 - Spacing system (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 */
+@font-face {
+  font-family: "proxima-nova";
+  src: url("./fonts/Proxima\ Nova\ Alt\ Light.otf");
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: "proxima-nova";
+  src: url("./fonts/Proxima\ Nova\ Bold.otf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "proxima-nova";
+  src: url("./fonts/ProximaNova-Regular.otf");
+  font-weight: normal;
+}
 
 * {
   padding: 0;

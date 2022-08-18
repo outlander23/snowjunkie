@@ -42,6 +42,7 @@
   .data-picker {
     padding-left: 0;
     padding-top: 10px;
+    width: 100%;
   }
 }
 
@@ -90,6 +91,7 @@
   .data-picker {
     padding-left: 0;
     padding-top: 10px;
+    width: 100%;
   }
 }
 
@@ -132,6 +134,7 @@
   .data-picker {
     padding-left: 0;
     padding-top: 0;
+    width: 100%;
   }
 }
 
@@ -174,5 +177,6 @@
   .data-picker {
     padding-left: 20px;
     padding-top: 0;
+    width: 50%;
   }
 }

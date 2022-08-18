@@ -9,6 +9,7 @@ import {
   Space,
   Input,
   DatePicker,
+  Select,
 } from "antd";
 
 // Components
@@ -24,9 +25,8 @@ import AccordionHeaderCustom from "../../components/AccordionHeader";
 import { IconActive, IconDeactivate } from "../../components/RadioIcon";
 
 //variables
-
 const Panel = Collapse.Panel;
-
+const Option = Select.Option;
 const AddNewProduct = () => {
   const [showImg, setShowImg] = useState(0);
   const handleChange = () => {
@@ -76,7 +76,12 @@ const AddNewProduct = () => {
                         <UploadButton />
                       </Upload>
                     )}
-                    {showImg === 1 && <UploadedImg onDelete={deleteImg} />}
+                    {showImg === 1 && (
+                      <UploadedImg
+                        srcImg={"img src file"}
+                        onDelete={deleteImg}
+                      />
+                    )}
                   </div>
                 </div>
               </div>
@@ -251,9 +256,7 @@ const AddNewProduct = () => {
                       <div className="accordion-box-content">
                         <div className="price-box">
                           <div className="price-picker">
-                            <h3 className="mb-2 font-semibold block text-sm color-mini-dark">
-                              Price
-                            </h3>
+                            <label className=" text-sm">Price</label>
                             <Input
                               placeholder="50"
                               prefix={<DollarOutlined />}
@@ -261,15 +264,17 @@ const AddNewProduct = () => {
                             />
                           </div>
                           <div className="data-picker">
-                            <h3 className="mb-2 font-semibold block text-sm color-mini-dark">
-                              Per
-                            </h3>
-                            <DatePicker
+                            <label className="text-sm ">Per</label>
+                            <Select
+                              defaultValue="Hour"
+                              style={{ width: "100%" }}
                               size="large"
-                              style={{
-                                width: "100%",
-                              }}
-                            />
+                            >
+                              <Option value="Hour">Hour</Option>
+                              <Option value="Day">Day</Option>
+                              <Option value="Week">Week</Option>
+                              <Option value="Month">Month</Option>
+                            </Select>
                           </div>
                         </div>
                       </div>

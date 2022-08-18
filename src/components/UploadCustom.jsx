@@ -34,7 +34,7 @@ export const UploadButton = () => {
   );
 };
 
-export const UploadedImg = ({ src, onDelete }) => {
+export const UploadedImg = ({ srcImg, onDelete }) => {
   return (
     <div className="upload-img-container " onClick={onDelete}>
       <div className="img-icon-cross">
