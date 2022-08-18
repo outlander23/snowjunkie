@@ -35,6 +35,14 @@
   .img-parent {
     width: 100%;
   }
+  .price-box {
+    display: flex;
+    flex-direction: column;
+  }
+  .data-picker {
+    padding-left: 0;
+    padding-top: 10px;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -75,6 +83,14 @@
   .img-parent {
     width: 100%;
   }
+  .price-box {
+    display: flex;
+    flex-direction: column;
+  }
+  .data-picker {
+    padding-left: 0;
+    padding-top: 10px;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -109,6 +125,14 @@
     display: flex;
     flex-direction: column;
   }
+  .price-box {
+    display: flex;
+    flex-direction: column;
+  }
+  .data-picker {
+    padding-left: 0;
+    padding-top: 0;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -142,5 +166,13 @@
   }
   .img-parent {
     width: 100%;
+  }
+  .price-box {
+    display: flex;
+    flex-direction: row;
+  }
+  .data-picker {
+    padding-left: 20px;
+    padding-top: 0;
   }
 }

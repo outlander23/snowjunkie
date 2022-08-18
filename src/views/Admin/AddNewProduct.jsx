@@ -249,8 +249,8 @@ const AddNewProduct = () => {
                   >
                     <div className="collapse-body">
                       <div className="accordion-box-content">
-                        <div className=" flex relative">
-                          <div className="">
+                        <div className="price-box">
+                          <div className="price-picker">
                             <h3 className="mb-2 font-semibold block text-sm color-mini-dark">
                               Price
                             </h3>
@@ -264,7 +264,12 @@ const AddNewProduct = () => {
                             <h3 className="mb-2 font-semibold block text-sm color-mini-dark">
                               Per
                             </h3>
-                            <DatePicker size="large" />
+                            <DatePicker
+                              size="large"
+                              style={{
+                                width: "100%",
+                              }}
+                            />
                           </div>
                         </div>
                       </div>

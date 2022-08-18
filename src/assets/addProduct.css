@@ -330,3 +330,7 @@ div.ant-upload {
   margin: 0;
   width: 100%;
 }
+.price-box {
+  display: flex;
+  flex-direction: column;
+}
