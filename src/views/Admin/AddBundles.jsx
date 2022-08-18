@@ -1,32 +1,17 @@
 import React, { useState } from "react";
 
 // Liberties
-import {
-  Upload,
-  Button,
-  Collapse,
-  Radio,
-  Space,
-  Input,
-  DatePicker,
-  Select,
-} from "antd";
+import { Upload, Button } from "antd";
 
 // Components
-import { DollarOutlined, DownloadOutlined } from "@ant-design/icons";
 import { UploadButton, UploadedImg } from "../../components/UploadCustom";
 
 //Assets
 import "../../assets/addProduct.css";
 import "../../assets/responsive.css";
-import RadioCustom from "../../components/RadioCustom";
-import CheckBoxCustom from "../../components/CheckBoxCustom";
-import AccordionHeaderCustom from "../../components/AccordionHeader";
-import { IconActive, IconDeactivate } from "../../components/RadioIcon";
 
 //variables
-const Panel = Collapse.Panel;
-const Option = Select.Option;
+
 const AddNewBundles = () => {
   const [showImg, setShowImg] = useState(0);
   const handleChange = () => {

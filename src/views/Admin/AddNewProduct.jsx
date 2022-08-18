@@ -1,16 +1,7 @@
 import React, { useState } from "react";
 
 // Liberties
-import {
-  Upload,
-  Button,
-  Collapse,
-  Radio,
-  Space,
-  Input,
-  DatePicker,
-  Select,
-} from "antd";
+import { Upload, Button, Collapse, Radio, Space, Input, Select } from "antd";
 
 // Components
 import { DollarOutlined, DownloadOutlined } from "@ant-design/icons";

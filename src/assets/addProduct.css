@@ -356,7 +356,7 @@ div.ant-upload {
   width: 20%;
   display: flex;
   justify-content: flex-start;
-  align-items: end;
+  align-items: flex-end;
   padding: 2rem 2rem;
 }
 .button-save {
