@@ -1,0 +1,315 @@
+* {
+  box-sizing: border-box;
+}
+
+.add-product-main {
+  padding-left: 60px;
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+.add-product-layout {
+  background: rgb(246, 248, 248);
+  display: flex;
+  flex-direction: row;
+  -webkit-box-align: stretch;
+  align-items: stretch;
+  width: 100%;
+  padding-top: 6.2rem;
+  box-sizing: border-box;
+}
+.add-product-nav {
+  border-bottom: 1px solid rgb(226, 230, 235);
+  width: 100%;
+  height: 6.2rem;
+  top: 0px;
+  position: fixed;
+  background: rgb(255, 255, 255);
+  z-index: 30;
+  min-width: 768px;
+  transition: all 250ms cubic-bezier(0.86, 0, 0.07, 1) 0s;
+  padding: 0px 85px 0px 40px;
+}
+.add-product-nav h1 {
+  display: inline-block;
+  max-width: 100%;
+  margin: 0px;
+  font-size: 20pt;
+  line-height: 6.1rem;
+  vertical-align: middle;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 100;
+}
+.add-product-container {
+  padding: 2.6rem;
+  flex: 1 1 0%;
+  order: 2;
+  height: calc(100vh - 62px);
+  overflow-y: scroll;
+  z-index: 29;
+  background: rgb(246, 248, 248);
+  position: relative;
+}
+.add-product-container-box {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.add-product-title-container {
+  position: relative;
+  min-height: 1px;
+  padding: 3.6rem 3rem;
+}
+
+.add-product-title-container h3 {
+  margin-bottom: 15px;
+  color: rgb(24, 24, 24);
+  font-family: proxima-nova, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.add-product-container-description {
+  color: rgb(121, 126, 128);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 30px 0px 0px;
+}
+.img-content {
+  width: 100%;
+  max-width: 620px;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(221, 225, 227);
+  border-radius: 6px;
+  text-align: left;
+  padding: 1.8rem;
+}
+.img-upload-content {
+  width: 225px;
+  height: 225px;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
+  border: 1px dashed rgb(221, 225, 227);
+  border-radius: 6px;
+}
+.img-upload-content:hover {
+  background-color: beige;
+}
+.img-parent {
+  width: 42%;
+  padding: 1.2rem;
+}
+.gen-info {
+  padding: 2.6rem 0rem;
+}
+.upload-box {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  color: rgb(118, 127, 130);
+  border-radius: 6px;
+  text-align: center;
+  transition: background 0.4s ease 0s;
+  cursor: pointer;
+}
+.add-product-input {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  height: 42px;
+  padding: 0px 18px;
+  margin: 0px;
+  color: rgb(24, 24, 24);
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(226, 230, 235);
+  border-radius: 6px;
+  outline: 0px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  box-sizing: border-box;
+}
+.add-product-input:focus {
+  border: 1px solid rgb(13, 108, 224);
+}
+.add-product-label {
+  display: block;
+  color: rgb(24, 24, 24);
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.4rem;
+  margin-bottom: 0.5rem;
+  height: 1.3em;
+  width: auto;
+  margin-bottom: 6px;
+}
+.title-box-img {
+  width: 58%;
+  padding-right: 1.2rem;
+}
+.upload-text {
+  cursor: pointer;
+  align-self: center;
+  font-size: 14px;
+  color: rgb(43, 128, 255);
+}
+.upload-text:hover {
+  color: rgb(50, 84, 136);
+}
+.upload-small {
+  background: rgb(255, 255, 255);
+  color: rgb(118, 127, 130);
+  border-radius: 6px;
+  text-align: center;
+  transition: background 0.4s ease 0s;
+  cursor: pointer;
+  display: block;
+}
+.upload-img-container {
+  width: 100%;
+  height: 225px;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
+  border: 1px dashed rgb(221, 225, 227);
+  border-radius: 6px;
+  position: relative;
+}
+.change-color:hover {
+  background-color: rgb(84, 81, 81);
+}
+.img-icon-cross {
+  position: absolute;
+  display: inline-block;
+  vertical-align: middle;
+  height: 26px;
+  padding: 0px 6px;
+  color: rgb(24, 24, 24);
+  background-color: rgb(255, 255, 255);
+  font-weight: 500;
+  font-size: 12px;
+  text-align: center;
+  line-height: 26px;
+  border-radius: 6px;
+  cursor: pointer;
+  outline: none;
+  white-space: nowrap;
+  border: 1px solid rgb(221, 225, 227);
+  text-decoration: none !important;
+  align-items: center;
+  top: 10%;
+}
+.img-icon-cross:hover {
+  border: 1px solid rgb(159, 209, 235);
+}
+.upload-img {
+  max-width: 100%;
+  max-height: 100%;
+}
+hr {
+  border-top: 1px solid #eeeeee;
+  border-color: rgb(221, 225, 227);
+  margin: 18px 0px;
+  display: block;
+  unicode-bidi: isolate;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  overflow: hidden;
+}
+.upload {
+  width: 100% !important;
+}
+.description-accordion {
+  margin: 0px;
+  color: rgb(118, 127, 130);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  display: block;
+  margin: 4px 0px 0px;
+  cursor: pointer;
+}
+.description-container-text {
+  color: rgb(118, 127, 130);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+.accordion-box-content {
+  padding: 18px 26px;
+  border: 1px solid rgb(221, 225, 227);
+  border-radius: 6px;
+  background-color: rgb(246, 248, 248);
+}
+
+.input-circle-activate {
+  height: 2rem;
+  width: 2rem;
+  display: inline-block;
+  border-radius: 50%;
+  border: 4px solid rgb(41, 15, 212);
+
+  background-color: rgb(219, 219, 227);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+}
+.input-circle-active:focus {
+  outline: none;
+}
+
+.input-circle-deactivate {
+  height: 2rem;
+  width: 2rem;
+  display: inline-block;
+  border-radius: 50%;
+  border: 4px solid rgba(109, 109, 113, 0);
+
+  background-color: rgb(235, 235, 236);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+}
+.input-circle-deactivate:focus {
+  outline: none;
+}
+
+.radio {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+.collapse {
+  padding: 12px 0px 12px 0px;
+  width: 100%;
+  max-width: 620px;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(221, 225, 227);
+  border-radius: 6px;
+  text-align: left;
+}
+.collapse-body {
+  padding: 0rem 4rem;
+}
+.data-picker {
+  padding-left: 20px;
+}
