@@ -16,8 +16,8 @@ import { DollarOutlined, DownloadOutlined } from "@ant-design/icons";
 import { UploadButton, UploadedImg } from "../../components/UploadCustom";
 
 //Assets
-import "../../assets/responsive.css";
 import "../../assets/addProduct.css";
+import "../../assets/responsive.css";
 import RadioCustom from "../../components/RadioCustom";
 import CheckBoxCustom from "../../components/CheckBoxCustom";
 import AccordionHeaderCustom from "../../components/AccordionHeader";
@@ -42,12 +42,12 @@ const AddNewProduct = () => {
           <h1>New product</h1>
         </nav>
         <div className="add-product-container">
-          <form className="w-full p-0 m-0">
+          <div className="parent-add-product">
             <section className="section-1">
               <div className=" gen-info">
                 <div className="add-product-title-container">
                   <h3>General information</h3>
-                  <div class="add-product-container-description">
+                  <div className="add-product-container-description">
                     This information helps you and your customers identify the
                     product on orders, documents and in the online store.
                   </div>
@@ -288,7 +288,7 @@ const AddNewProduct = () => {
                 </Collapse>
               </div>
             </section>{" "}
-          </form>
+          </div>
         </div>
       </div>
     </div>

@@ -326,3 +326,7 @@ hr {
 div.ant-upload {
   width: 100%;
 }
+.parent-add-product {
+  margin: 0;
+  width: 100%;
+}
