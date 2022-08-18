@@ -43,6 +43,7 @@
   font-weight: 100;
 }
 .add-product-container {
+  width: 100%;
   padding: 0;
   flex: 1 1 0%;
   order: 2;
@@ -347,4 +348,33 @@ div.ant-upload {
   height: 1.3em;
   width: auto;
   margin-bottom: 6px;
+}
+.w-75 {
+  width: 80%;
+}
+.button-box {
+  width: 20%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: end;
+  padding: 2rem 2rem;
+}
+.button-save {
+  margin-left: 2rem;
+}
+.button-box-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-section {
+  display: flex;
+  flex-direction: row;
+  width: 75%;
+}
+.gen-info {
+  padding: 5.6rem 2.6rem;
+}
+.gen-bundle {
+  padding: 2.6rem 1.6rem;
 }

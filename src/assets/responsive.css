@@ -44,6 +44,9 @@
     padding-top: 10px;
     width: 100%;
   }
+  .gen-info {
+    padding: 1.6rem 1rem;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -93,6 +96,9 @@
     padding-top: 10px;
     width: 100%;
   }
+  .gen-info {
+    padding: 1.6rem 1rem;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -136,6 +142,15 @@
     padding-top: 0;
     width: 100%;
   }
+  .w-75 {
+    width: 80%;
+  }
+  .button-box {
+    width: 20%;
+  }
+  .gen-info {
+    padding: 1.6rem 1rem;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -178,5 +193,14 @@
     padding-left: 20px;
     padding-top: 0;
     width: 50%;
+  }
+  .w-75 {
+    width: 80%;
+  }
+  .button-box {
+    width: 20%;
+  }
+  .gen-info {
+    padding: 5.6rem 2.6rem;
   }
 }

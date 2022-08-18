@@ -39,12 +39,12 @@ const AddNewBundles = () => {
     <div className="add-product-main">
       <div className="add-product-layout">
         <nav className="add-product-nav">
-          <h1>General information</h1>
+          <h1>Add a new bundle</h1>
         </nav>
         <div className="add-product-container">
           <div className="parent-add-product">
             <section className="section-1">
-              <div className=" gen-info">
+              <div className=" gen-bundle">
                 <div className="add-product-title-container">
                   <h3>General information</h3>
                   <div className="add-product-container-description">
@@ -88,13 +88,18 @@ const AddNewBundles = () => {
             </section>
             <hr />
             {/*  // -------------End Of 1st Section  ------------  */}
-            <div className="button-box">
-              <div className="button-box-child">
-                <Button className="button-1 ">Cancel</Button>
-                <Button type="primary" className="button-1 button-save">
-                  Save
-                </Button>
-              </div>
+            <div className="parent-add-product">
+              <section className="button-section">
+                <div className="w-75"></div>
+                <div className="button-box">
+                  <div className="button-box-child">
+                    <Button className="button-1 ">Cancel</Button>
+                    <Button type="primary" className="button-1 button-save">
+                      Save
+                    </Button>
+                  </div>
+                </div>
+              </section>
             </div>
           </div>
         </div>
