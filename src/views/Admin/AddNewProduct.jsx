@@ -12,14 +12,15 @@ import {
 } from "antd";
 
 // Components
-import { UploadButton, UploadedImg } from "../../components/UploadCustom";
 import { DollarOutlined, DownloadOutlined } from "@ant-design/icons";
+import { UploadButton, UploadedImg } from "../../components/UploadCustom";
 
 //Assets
+import "../../assets/responsive.css";
 import "../../assets/addProduct.css";
-import AccordionHeaderCustom from "../../components/AccordionHeader";
 import RadioCustom from "../../components/RadioCustom";
 import CheckBoxCustom from "../../components/CheckBoxCustom";
+import AccordionHeaderCustom from "../../components/AccordionHeader";
 import { IconActive, IconDeactivate } from "../../components/RadioIcon";
 
 //variables
@@ -42,8 +43,8 @@ const AddNewProduct = () => {
         </nav>
         <div className="add-product-container">
           <form className="w-full p-0 m-0">
-            <section className="flex flex-row w-full p-0">
-              <div className="w-25 gen-info">
+            <section className="section-1">
+              <div className=" gen-info">
                 <div className="add-product-title-container">
                   <h3>General information</h3>
                   <div class="add-product-container-description">
@@ -52,9 +53,9 @@ const AddNewProduct = () => {
                   </div>
                 </div>
               </div>
-              <div className="add-product-title-container w-full ">
-                <div className="img-content w-full flex flex-row ">
-                  <div className="flex flex-col title-box-img ">
+              <div className="add-product-title-container ">
+                <div className="img-content">
+                  <div className=" title-box-img ">
                     <label className="add-product-label">Product name</label>
                     <input
                       className="add-product-input"
@@ -67,7 +68,10 @@ const AddNewProduct = () => {
                     {showImg === 0 && (
                       <Upload
                         onChange={handleChange}
-                        className="w-full change-color upload"
+                        className="upload"
+                        style={{
+                          width: "100%",
+                        }}
                       >
                         <UploadButton />
                       </Upload>
@@ -79,7 +83,7 @@ const AddNewProduct = () => {
             </section>
             <hr />
             {/*  // -------------End Of 1st Section  ------------  */}
-            <section className="flex flex-row w-full p-0">
+            <section className="section-1">
               <div className="w-25 gen-info">
                 <div className="add-product-title-container">
                   <h3>Tracking method</h3>
@@ -208,7 +212,7 @@ const AddNewProduct = () => {
             </section>{" "}
             <hr />
             {/*  // -------------End Of 2st Section  ------------  */}
-            <section className="flex flex-row w-full p-0">
+            <section className="section-1">
               <div className="w-25 gen-info">
                 <div className="add-product-title-container">
                   <h3>Pricing</h3>

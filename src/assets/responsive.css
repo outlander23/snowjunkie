@@ -1,0 +1,146 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-size: 80%;
+  }
+  .section-1 {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    width: 100%;
+    padding-top: 2.2rem;
+    box-sizing: border-box;
+  }
+  .gen-info {
+    width: 100%;
+  }
+  .add-product-title-container {
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+  .img-content {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+  }
+  .title-box-img {
+    width: 100%;
+  }
+  .img-parent {
+    width: 100%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-size: 80%;
+  }
+
+  .section-1 {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    width: 100%;
+    padding-top: 2.2rem;
+    box-sizing: border-box;
+  }
+  .gen-info {
+    width: 100%;
+  }
+  .add-product-title-container {
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+  .img-content {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+  }
+  .title-box-img {
+    width: 100%;
+  }
+  .img-parent {
+    width: 100%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-size: 80%;
+  }
+
+  .section-1 {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    width: 100%;
+    padding-top: 2.2rem;
+    box-sizing: border-box;
+  }
+  .gen-info {
+    width: 100%;
+  }
+  .add-product-title-container {
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+  .img-content {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  body {
+    font-size: 80%;
+  }
+  .section-1 {
+    display: flex;
+    flex-direction: row;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    width: 100%;
+    padding-top: 1.2rem;
+    box-sizing: border-box;
+  }
+  .gen-info {
+    width: 30%;
+  }
+  .add-product-title-container {
+    width: 100%;
+    padding: 3.6rem 3rem;
+  }
+  .img-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .title-box-img {
+    width: 100%;
+  }
+  .img-parent {
+    width: 100%;
+  }
+}

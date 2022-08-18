@@ -24,7 +24,7 @@ export const getBase64 = (img, callback) => {
 export const UploadButton = () => {
   return (
     <div className="img-upload-content">
-      <div class="upload-box">
+      <div className="upload-box">
         <span className="upload-text">
           upload
           <small className="upload-small">or drop file</small>
