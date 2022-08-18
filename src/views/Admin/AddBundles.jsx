@@ -90,8 +90,8 @@ const AddNewBundles = () => {
             {/*  // -------------End Of 1st Section  ------------  */}
             <div className="button-box">
               <div className="button-box-child">
-                <Button>Cancel</Button>
-                <Button type="primary" className="button">
+                <Button className="button-1 ">Cancel</Button>
+                <Button type="primary" className="button-1 button-save">
                   Save
                 </Button>
               </div>
