@@ -43,7 +43,7 @@
   font-weight: 100;
 }
 .add-product-container {
-  padding: 2.6rem;
+  padding: 0;
   flex: 1 1 0%;
   order: 2;
   height: calc(100vh - 62px);
@@ -59,7 +59,7 @@
 .add-product-title-container {
   position: relative;
   min-height: 1px;
-  padding: 3.6rem 3rem;
+  padding: 1.6rem 1.5rem;
   width: 100%;
 }
 

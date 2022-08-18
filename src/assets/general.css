@@ -160,3 +160,50 @@ body {
 .col-12 {
   width: 100%;
 }
+.button-box {
+  width: 80%;
+  padding-top: 2rem;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: inline-block;
+}
+
+.button-box-child {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: 4rem;
+  /* width: 100%; */
+  float: right;
+}
+.button-1 {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  height: 42px;
+  padding: 0px 18px;
+
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  line-height: 42px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  white-space: nowrap;
+  cursor: default;
+
+  text-decoration: none !important;
+}
+.button-save {
+  background-color: rgb(43, 128, 255);
+  margin-left: 3rem;
+  color: rgb(255, 255, 255);
+}
+.button-cancel {
+  background-color: rgb(255, 255, 255);
+}
+.button-cancel:hover {
+  background-color: rgb(207, 204, 204);
+  color: rgb(0, 0, 0);
+}

@@ -298,6 +298,16 @@ const AddNewProduct = () => {
                 </Collapse>
               </div>
             </section>{" "}
+            <hr />
+          </div>
+
+          <div className="button-box">
+            <div className="button-box-child">
+              <Button className="button-1 ">Cancel</Button>
+              <Button type="primary" className="button-1 button-save">
+                Save
+              </Button>
+            </div>
           </div>
         </div>
       </div>
