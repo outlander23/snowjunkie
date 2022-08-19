@@ -36,10 +36,10 @@ const AddNewBundles = () => {
     console.log(data);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // logic to upload the img
-  };
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  // logic to upload the img
+  // };
   return (
     <div className="add-product-main">
       <div className="add-product-layout">
