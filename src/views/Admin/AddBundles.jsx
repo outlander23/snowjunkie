@@ -13,12 +13,32 @@ import "../../assets/responsive.css";
 //variables
 
 const AddNewBundles = () => {
+  const [bundleName, setBundleName] = useState("");
   const [showImg, setShowImg] = useState(0);
-  const handleChange = () => {
+  const [img, setImg] = useState();
+
+  const handleUpload = ({ fileList }) => {
     setShowImg(1);
+    const imageUrl = URL.createObjectURL(fileList[0].originFileObj);
+    setImg(imageUrl);
   };
+
   const deleteImg = () => {
     setShowImg(0);
+  };
+
+  const onSubmit = () => {
+    const data = {
+      bundleName,
+      img,
+    };
+
+    console.log(data);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // logic to upload the img
   };
   return (
     <div className="add-product-main">
@@ -47,12 +67,18 @@ const AddNewBundles = () => {
                       type="text"
                       autoComplete="off"
                       placeholder="Bundles name"
+                      name="bundleName"
+                      onChange={(e) => {
+                        setBundleName(e.target.value);
+                      }}
+                      value={bundleName}
                     />
                   </div>
                   <div className="img-parent">
                     {showImg === 0 && (
                       <Upload
-                        onChange={handleChange}
+                        onChange={handleUpload}
+                        beforeUpload={() => false}
                         className="upload"
                         style={{
                           width: "100%",
@@ -62,10 +88,7 @@ const AddNewBundles = () => {
                       </Upload>
                     )}
                     {showImg === 1 && (
-                      <UploadedImg
-                        srcImg={"img src file"}
-                        onDelete={deleteImg}
-                      />
+                      <UploadedImg srcImg={img} onDelete={deleteImg} />
                     )}
                   </div>
                 </div>
@@ -78,8 +101,16 @@ const AddNewBundles = () => {
                 <div className="w-75"></div>
                 <div className="button-box">
                   <div className="button-box-child">
-                    <Button className="button-1 button-cancel">Cancel</Button>
-                    <Button type="primary" className="button-1 button-save">
+                    <Button className="button-1 ">Cancel</Button>
+                    <Button
+                      type="primary"
+                      className={
+                        bundleName
+                          ? "button-1 button-save "
+                          : "button-1 button-save disable"
+                      }
+                      onClick={onSubmit}
+                    >
                       Save
                     </Button>
                   </div>

@@ -1,11 +1,24 @@
 import React, { useState } from "react";
 
 // Liberties
-import { Upload, Button, Collapse, Radio, Space, Input, Select } from "antd";
+import {
+  Upload,
+  Button,
+  Collapse,
+  Radio,
+  Space,
+  Input,
+  Select,
+  message,
+} from "antd";
 
 // Components
 import { DollarOutlined, DownloadOutlined } from "@ant-design/icons";
-import { UploadButton, UploadedImg } from "../../components/UploadCustom";
+import {
+  getBase64,
+  UploadButton,
+  UploadedImg,
+} from "../../components/UploadCustom";
 
 //Assets
 import "../../assets/addProduct.css";
@@ -18,14 +31,76 @@ import { IconActive, IconDeactivate } from "../../components/RadioIcon";
 //variables
 const Panel = Collapse.Panel;
 const Option = Select.Option;
+
+// Data
+const dataOfTrackingMethod = {
+  1: "Rental product",
+  2: "Consumable",
+  3: "Service",
+};
+
 const AddNewProduct = () => {
+  const [data, setData] = useState({
+    tracking_method: "",
+    product_name: "",
+    price: "",
+    price_per: "Hour",
+    img: "",
+    enable_validation: false,
+    tracking_method_selected_option: "",
+  });
+
   const [showImg, setShowImg] = useState(0);
-  const handleChange = () => {
-    setShowImg(1);
+
+  const handleInputChange = ({ target }) => {
+    setData((prevState) => {
+      return { ...prevState, [target.name]: target.value };
+    });
   };
+
+  const handleCollapseChange = (key) => {
+    setData((prevState) => {
+      return { ...prevState, tracking_method: dataOfTrackingMethod[key] };
+    });
+  };
+  const handleRadioChange = (info) => {
+    setData((prevState) => {
+      return {
+        ...prevState,
+        tracking_method_selected_option: info.target.value,
+      };
+    });
+  };
+
+  const handlePricePre = (value) => {
+    setData((prevState) => {
+      return { ...prevState, price_per: value };
+    });
+  };
+
+  const handleCheckBoxChange = (value) => {
+    setData((prevState) => {
+      return { ...prevState, enable_validation: !value };
+    });
+  };
+
+  const handleUpload = ({ fileList }) => {
+    setShowImg(1);
+    const imageUrl = URL.createObjectURL(fileList[0].originFileObj);
+    setData((prevState) => {
+      return { ...prevState, img: imageUrl };
+    });
+  };
+
   const deleteImg = () => {
     setShowImg(0);
   };
+  // Below functions Need Backend for working purposes
+  const onSubmit = (e) => {
+    console.log(data);
+    // Login To submit form
+  };
+
   return (
     <div className="add-product-main">
       <div className="add-product-layout">
@@ -53,12 +128,15 @@ const AddNewProduct = () => {
                       type="text"
                       autoComplete="off"
                       placeholder="eg: iPad"
+                      value={data.product_name}
+                      onChange={handleInputChange}
+                      name="product_name"
                     />
                   </div>
                   <div className="img-parent">
                     {showImg === 0 && (
                       <Upload
-                        onChange={handleChange}
+                        onChange={handleUpload}
                         className="upload"
                         style={{
                           width: "100%",
@@ -68,10 +146,7 @@ const AddNewProduct = () => {
                       </Upload>
                     )}
                     {showImg === 1 && (
-                      <UploadedImg
-                        srcImg={"img src file"}
-                        onDelete={deleteImg}
-                      />
+                      <UploadedImg srcImg={data.img} onDelete={deleteImg} />
                     )}
                   </div>
                 </div>
@@ -83,7 +158,7 @@ const AddNewProduct = () => {
               <div className="w-25 gen-info">
                 <div className="add-product-title-container">
                   <h3>Tracking method</h3>
-                  <div class="add-product-container-description">
+                  <div className="add-product-container-description">
                     <p>
                       The
                       <Button
@@ -103,12 +178,12 @@ const AddNewProduct = () => {
               <div className="add-product-title-container w-full ">
                 <Collapse
                   className="collapse"
-                  defaultActiveKey={["1"]}
                   accordion
                   bordered={false}
                   expandIcon={({ isActive }) =>
                     isActive ? <IconActive /> : <IconDeactivate />
                   }
+                  onChange={handleCollapseChange}
                 >
                   <Panel
                     header={
@@ -121,10 +196,10 @@ const AddNewProduct = () => {
                   >
                     <div className="collapse-body">
                       <div className="accordion-box-content">
-                        <Radio.Group>
+                        <Radio.Group onChange={handleRadioChange}>
                           <Space direction="vertical">
                             <Radio
-                              value={1}
+                              value={"Track in bulk"}
                               className="flex justify-start items-center"
                             >
                               <RadioCustom
@@ -134,7 +209,7 @@ const AddNewProduct = () => {
                               />
                             </Radio>
                             <Radio
-                              value={2}
+                              value={"Track individual items"}
                               className="flex justify-start items-center"
                             >
                               <RadioCustom
@@ -143,7 +218,10 @@ const AddNewProduct = () => {
                               />
                             </Radio>
                             <hr />
-                            <CheckBoxCustom />
+                            <CheckBoxCustom
+                              handleCheckBox={handleCheckBoxChange}
+                              checkedValue={data.enable_validation}
+                            />
                           </Space>
                         </Radio.Group>
                       </div>
@@ -160,10 +238,10 @@ const AddNewProduct = () => {
                   >
                     <div className="collapse-body">
                       <div className="accordion-box-content">
-                        <Radio.Group>
+                        <Radio.Group onChange={handleRadioChange}>
                           <Space direction="vertical">
                             <Radio
-                              value={1}
+                              value={"Not tracked"}
                               className="flex justify-start items-center"
                             >
                               <RadioCustom
@@ -172,7 +250,7 @@ const AddNewProduct = () => {
                               />
                             </Radio>
                             <Radio
-                              value={2}
+                              value={"Track in bulk"}
                               className="flex justify-start items-center"
                             >
                               <RadioCustom
@@ -181,7 +259,10 @@ const AddNewProduct = () => {
                               />
                             </Radio>
                             <hr />
-                            <CheckBoxCustom />
+                            <CheckBoxCustom
+                              handleCheckBox={handleCheckBoxChange}
+                              checkedValue={data.enable_validation}
+                            />
                           </Space>
                         </Radio.Group>
                       </div>
@@ -205,14 +286,14 @@ const AddNewProduct = () => {
                   </Panel>
                 </Collapse>
               </div>
-            </section>{" "}
+            </section>
             <hr />
             {/*  // -------------End Of 2st Section  ------------  */}
             <section className="section-1">
               <div className="w-25 gen-info">
                 <div className="add-product-title-container">
                   <h3>Pricing</h3>
-                  <div class="add-product-container-description">
+                  <div className="add-product-container-description">
                     <p>
                       Determines how the price will be calculated for a rental
                       period.
@@ -233,6 +314,7 @@ const AddNewProduct = () => {
                   expandIcon={({ isActive }) =>
                     isActive ? <IconActive /> : <IconDeactivate />
                   }
+                  onChange={handleCollapseChange}
                 >
                   <Panel
                     header={
@@ -252,6 +334,8 @@ const AddNewProduct = () => {
                               placeholder="50"
                               prefix={<DollarOutlined />}
                               size="large"
+                              onChange={handleInputChange}
+                              name="price"
                             />
                           </div>
                           <div className="data-picker">
@@ -260,6 +344,8 @@ const AddNewProduct = () => {
                               defaultValue="Hour"
                               style={{ width: "100%" }}
                               size="large"
+                              onChange={handlePricePre}
+                              name="price_per"
                             >
                               <Option value="Hour">Hour</Option>
                               <Option value="Day">Day</Option>
@@ -288,16 +374,24 @@ const AddNewProduct = () => {
                   </Panel>
                 </Collapse>
               </div>
-            </section>{" "}
+            </section>
           </div>
-          <hr />{" "}
+          <hr />
           <div className="parent-add-product">
             <section className="button-section">
               <div className="w-75"></div>
               <div className="button-box">
                 <div className="button-box-child">
                   <Button className="button-1 ">Cancel</Button>
-                  <Button type="primary" className="button-1 button-save">
+                  <Button
+                    type="primary"
+                    className={
+                      data.product_name && data.tracking_method
+                        ? "button-1 button-save "
+                        : "button-1 button-save disable"
+                    }
+                    onClick={onSubmit}
+                  >
                     Save
                   </Button>
                 </div>

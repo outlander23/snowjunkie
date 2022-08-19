@@ -407,3 +407,10 @@ div.ant-upload {
 .button-save:hover {
   background-color: rgb(20, 99, 216);
 }
+
+.disable {
+  opacity: 0.6;
+  cursor: none;
+  pointer-events: none !important;
+  text-decoration: none !important;
+}

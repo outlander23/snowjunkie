@@ -1,0 +1,48 @@
+ dataOfTracking = [
+  {
+    title: "Rental product",
+    subtitle:
+      "Products you rent out. They are expected to be returned at the end of a rental period.",
+    options: [
+      {
+        title: "Track in bulk",
+        subtitle:
+          "Only track quantities to easily handle a large number of items.",
+      },
+      {
+        title: "Track individual items",
+        subtitle:
+          "Keep track of individual items using identifiers (like serial numbers).",
+      },
+      {
+        title: "Enable variations",
+        subtitle: "This product has multiple options, like sizes or colors.",
+      },
+    ],
+  },
+  {
+    title: "Consumable",
+    subtitle:
+      "Items you sell or give away. They are not returned at the end of a rental period.",
+    options: [
+      {
+        title: "Not tracked",
+        subtitle: "Don't track quantities for this product.",
+      },
+      {
+        title: "Track in bulk",
+        subtitle: "Track quantities for this product.",
+      },
+      {
+        title: "Enable variations",
+        subtitle: "This product has multiple options, like sizes or colors.",
+      },
+    ],
+  },
+  {
+    title: "Service",
+    subtitle:
+      "Non-physical services you offer with rentals (like setup costs).",
+    details: "Inventory is not tracked for services",
+  },
+]

@@ -1,17 +1,21 @@
 import React from "react";
 import { Checkbox } from "antd";
-const CheckBoxCustom = () => {
+
+const CheckBoxCustom = ({ handleCheckBox, checkedValue }) => {
   return (
-    <Checkbox>
+    <Checkbox
+      onChange={() => handleCheckBox(checkedValue)}
+      checked={checkedValue}
+    >
       <div className="flex flex-col">
         <div className="w-full flex justify-start items-center">
-          <label class="inline-block  font-semibold leading-3 text-xs cursor-pointer">
+          <label className="inline-block  font-semibold leading-3 text-xs cursor-pointer">
             Enable variations
           </label>
         </div>
 
         <div className="flex flex-col">
-          <div class="description-accordion">
+          <div className="description-accordion">
             This product has multiple options, like sizes or colors.
           </div>
         </div>
