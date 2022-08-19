@@ -78,7 +78,7 @@ const AddNewBundles = () => {
                 <div className="w-75"></div>
                 <div className="button-box">
                   <div className="button-box-child">
-                    <Button className="button-1 ">Cancel</Button>
+                    <Button className="button-1 button-cancel">Cancel</Button>
                     <Button type="primary" className="button-1 button-save">
                       Save
                     </Button>

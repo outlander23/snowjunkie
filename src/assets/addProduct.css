@@ -378,3 +378,32 @@ div.ant-upload {
 .gen-bundle {
   padding: 2.6rem 1.6rem;
 }
+.button-1 {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  height: 42px;
+  padding: 0px 18px;
+
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  line-height: 42px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  white-space: nowrap;
+  cursor: default;
+
+  text-decoration: none !important;
+}
+.button-cancel:hover {
+  box-shadow: rgb(0 0 0 / 12%) 0px 0px 400px 110px inset;
+  color: rgb(24, 24, 24);
+}
+.button-save {
+  background-color: rgb(59, 123, 219);
+}
+.button-save:hover {
+  background-color: rgb(20, 99, 216);
+}
